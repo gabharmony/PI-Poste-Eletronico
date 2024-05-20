@@ -3,7 +3,6 @@ import Data from "./Data/Data.js";
 var agora = new Data();
 var nomeUser = sessionStorage.getItem("Nome");
 
-
 function inicializacao(){
     var hora = agora.getHoras();
     var saudacao = "";
@@ -30,10 +29,3 @@ function inicializacao(){
 }
 
 inicializacao();
-
-
-
-
-
-
-

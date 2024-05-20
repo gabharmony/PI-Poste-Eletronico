@@ -1,0 +1,43 @@
+const formPrestLogin = document.querySelector("#login-prest");
+const email = document.querySelector("#email");
+const senha = document.querySelector("#senha");
+
+
+function clickLogin(){
+    event.preventDefault();
+    console.log("Teste")
+    if(email.value.length >= 13 && senha.value.length >=8){
+        loginPrest();
+    }
+    else{
+        const div = document.querySelector(".status");
+        div.innerHTML = '<div class="alert alert-danger" role="alert">Digite seus dados corretamente.</div>';
+        let log = {
+            email: email.value.length,
+            senha: senha.value.length
+        }
+        console.log(log)
+    }
+
+}
+
+function loginPrest(){
+
+    const url = "http://localhost:8080/prestador/login/"+ email.value + "/" + senha.value;
+    fetch(url)
+    .then(response => response.json())  
+    .then(data => {
+        console.log(data.id_prestador);
+    })  
+    .catch(function (res) {console.log(res) 
+        const div = document.querySelector(".status");
+        div.innerHTML = '<div class="alert alert-danger" role="alert">Email ou senha incorretos.</div>';
+        let log = {
+            email: email.value,
+            senha: senha.value
+        }
+        console.log(log)
+    })
+}
+
+formPrestLogin.addEventListener("submit", clickLogin)
