@@ -5,7 +5,6 @@ const senha = document.querySelector("#senha");
 
 function clickLogin(){
     event.preventDefault();
-    console.log("Teste")
     if(email.value.length >= 13 && senha.value.length >=8){
         loginPrest();
     }
@@ -27,7 +26,14 @@ function loginPrest(){
     fetch(url)
     .then(response => response.json())  
     .then(data => {
-        console.log(data.id_prestador);
+        sessionStorage.setItem("idPrest", data.id_prestador);
+        sessionStorage.setItem("nomePrest", data.nome);
+        sessionStorage.setItem("sobrenomePrest", data.sobrenome);
+        sessionStorage.setItem("celularPrest", data.celular);
+        sessionStorage.setItem("emailPrest", data.email);
+        sessionStorage.setItem("senhaPrest", data.senha);
+
+        setInterval(redirecionarHome, 2000)
     })  
     .catch(function (res) {console.log(res) 
         const div = document.querySelector(".status");
@@ -38,6 +44,10 @@ function loginPrest(){
         }
         console.log(log)
     })
+}
+
+function redirecionarHome(){
+    window.location.replace("http://127.0.0.1:5500/app/home.html");
 }
 
 formPrestLogin.addEventListener("submit", clickLogin)

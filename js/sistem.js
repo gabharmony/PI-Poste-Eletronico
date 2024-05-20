@@ -1,7 +1,7 @@
 import Data from "./Data/Data.js";
 
 var agora = new Data();
-var nomeUser = sessionStorage.getItem("Nome");
+var nomeUser = sessionStorage.getItem("nomePrest");
 
 function inicializacao(){
     var hora = agora.getHoras();
