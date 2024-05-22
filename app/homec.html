@@ -90,7 +90,7 @@
                       <li>
                         <a href="#" class="nav-link text-white active">
                           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#file-plus"></use></svg>
-                          Adicionar Serviços
+                          Procurar Serviços
                         </a>
                       </li>
                     </ul>
@@ -116,6 +116,7 @@
                                 <h3 id="saudacao"></h3>
                                 <h6 id="data"></h6>
                             </div>
+                            <div class="content content-principal">
                             <div class="content-addService">
                               <h5 class="title-funcao">Adicionar Serviço</h5>
                               <hr>
@@ -127,13 +128,12 @@
                                           <form class="addService-col">
                                               <div class="mb-3">
                                                   <label for="inputServico" class="form-label">Serviço:</label>
-                                                  <select class="form-select" aria-label="Default select" id="nome_servico">
+                                                  <select class="form-select" aria-label="Default select" id="inputServico">
                                                     <option selected>Selecione o serviço</option>
-                                                    <option value="Pedreiro">Pedreiro</option>
-                                                    <option value="Eletricista">Eletricista</option>
-                                                    <option value="Hidráulica">Hidráulica</option>
-                                                    <option value="Professor Particular">Professor particular</option>
-                                                    <option value="Outro">Professor particular</option>
+                                                    <option value="1">Pedreiro</option>
+                                                    <option value="2">Eletricista</option>
+                                                    <option value="3">Hidráulica</option>
+                                                    <option value="4">Professor particular</option>
                                                   </select>
                                               </div>
                                               <div class="mb-3">
@@ -145,8 +145,9 @@
                                       </div>
                                   </div>
                                   <div class="col disabled"></div>
+                                </div>
                               </div>
-                              </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -154,7 +155,7 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script type="module" src="../js/sistem.js"></script>
+        <script type="module" src="../js/sistemc.js"></script>
         <script type="module" src="../js/Data/Data.js" ></script>
     </body>
 </html>

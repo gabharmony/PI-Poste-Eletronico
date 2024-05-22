@@ -1,12 +1,11 @@
-const formPrestLogin = document.querySelector("#login-prest");
+const formContratLogin = document.querySelector("#login-contrat");
 const email = document.querySelector("#email");
 const senha = document.querySelector("#senha");
-
 
 function clickLogin(){
     event.preventDefault();
     if(email.value.length >= 13 && senha.value.length >=8){
-        loginPrest();
+        loginContrat();
     }
     else{
         const div = document.querySelector(".status");
@@ -19,9 +18,8 @@ function clickLogin(){
     }
 }
 
-function loginPrest(){
-
-    const url = "http://localhost:8080/prestador/login/"+ email.value + "/" + senha.value;
+function loginContrat(){
+    const url = "http://localhost:8080/contratante/login/"+ email.value + "/" + senha.value;
     fetch(url)
     .then(response => response.json())  
     .then(data => {
@@ -46,7 +44,7 @@ function loginPrest(){
 }
 
 function redirecionarHome(){
-    window.location.replace("http://127.0.0.1:5500/app/home.html");
+    window.location.replace("http://127.0.0.1:5500/app/homec.html");
 }
 
-formPrestLogin.addEventListener("submit", clickLogin)
+formContratLogin.addEventListener("submit", clickLogin)

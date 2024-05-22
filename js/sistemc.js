@@ -28,7 +28,11 @@ function inicializacao(){
     document.getElementById("dropdownNomeUser").innerHTML = nomeUser;
 }
 
+const content = document.querySelector(".content-principal");
 
-
+function carregarConteudo(conteudo){
+    content.innerHTML = conteudo;
+}
 
 inicializacao();
+carregarConteudo(capituloUmAbertura);
