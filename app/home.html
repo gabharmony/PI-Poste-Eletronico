@@ -75,23 +75,23 @@
         </section>
         <div class="content content-system">
             <div class="content content-sidebar">
-                <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar" style="width: 280px;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar">
                     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 text-white text-decoration-none">
                       <span class="text-span">Poste Eletrônico</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                       <li class="nav-item">
-                        <a href="home.html" class="nav-link text-white" aria-current="page">
+                        <button type="button" class="nav-link text-white active" id="homeSystem" role="button" aria-current="page">
                           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                           Home
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a href="#" class="nav-link text-white active">
+                        <button type="button" class="nav-link text-white" id="addService" role="button" aria-current="page">
                           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#file-plus"></use></svg>
                           Adicionar Serviços
-                        </a>
+                        </button>
                       </li>
                     </ul>
                     <hr>
@@ -116,38 +116,7 @@
                                 <h3 id="saudacao"></h3>
                                 <h6 id="data"></h6>
                             </div>
-                            <div class="content-addService">
-                              <h5 class="title-funcao">Adicionar Serviço</h5>
-                              <hr>
-                              <div class="content-funcao">
-                                <div class="row align-items-md-center">
-                                  <div class="col disabled"></div>
-                                  <div class="col-md-6">
-                                      <div class="h-100 p-5 bg-body-tertiary border rounded-3 text-center">
-                                          <form class="addService-col">
-                                              <div class="mb-3">
-                                                  <label for="inputServico" class="form-label">Serviço:</label>
-                                                  <select class="form-select" aria-label="Default select" id="nome_servico">
-                                                    <option selected>Selecione o serviço</option>
-                                                    <option value="Pedreiro">Pedreiro</option>
-                                                    <option value="Eletricista">Eletricista</option>
-                                                    <option value="Hidráulica">Hidráulica</option>
-                                                    <option value="Professor Particular">Professor particular</option>
-                                                    <option value="Outro">Professor particular</option>
-                                                  </select>
-                                              </div>
-                                              <div class="mb-3">
-                                                  <label for="inputDescricao" class="form-label">Descrição:</label>
-                                                  <textarea class="form-control" placeholder="Descreva seu serviço aqui..." id="inputDescricao"></textarea>
-                                              </div>
-                                              <button type="submit" class="btn btn-primary">Adicionar</button>
-                                          </form>
-                                      </div>
-                                  </div>
-                                  <div class="col disabled"></div>
-                              </div>
-                              </div>
-                            </div>
+                            <div class="content content-principal"></div>
                         </div>
                     </div>
                 </div>

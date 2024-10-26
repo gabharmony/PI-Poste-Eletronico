@@ -28,6 +28,7 @@ function inicializacao(){
     document.getElementById("dropdownNomeUser").innerHTML = nomeUser;
 }
 
+
 const content = document.querySelector(".content-principal");
 
 function carregarConteudo(conteudo){
@@ -35,4 +36,4 @@ function carregarConteudo(conteudo){
 }
 
 inicializacao();
-carregarConteudo(capituloUmAbertura);
+carregarConteudo();

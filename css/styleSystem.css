@@ -4,6 +4,11 @@
     fill: #fff;
 }
 
+.nav-link{
+    width: 100%;
+    text-align: left;
+}
+
 .text-bg-dark{
     background-color: #1c3380 !important;
 }
@@ -16,8 +21,14 @@ span.text-span{
 }
 
 .content-sidebar{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: max-content;
+}
+
+.content-sidebar div.d-flex{
+    width: 280px;
 }
  
 .sidebar{
@@ -31,20 +42,38 @@ span.text-span{
 .content-system{
     display: flex;
     flex-direction: row;
-    width: 98.4vw;
-
+    width: 99.4vw;
+    height: 100vh;
 }
 
 .system-content{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
+}
+
+.system-home{
+    height: 100vh;
+}
+
+.content-principal{
+    height: 83.2vh;
+}
+
+.container{
+    height: 94.8vh;
+}
+
+.container > div{
+    height: 94.5vh;
 }
 
 .container .content{
     width: auto;
     margin-top: 2rem;
     margin-left: 2rem;
+    overflow: hidden;
 }
 
 .container .content .header{
@@ -54,11 +83,135 @@ span.text-span{
     justify-content: space-between;
 }
 
-.content-addService{
+.content-home{
+    height: 100%;
+    text-align: center;
+}
+
+.content-funcao-home{
+    overflow: hidden;
+    text-align: center !important;
+    width: 100%;
+    height: 69vh;
+    display: flex;
+    align-items: center !important;
+}
+
+.content-addService, .content-home{
     padding-top: 2rem;
     text-align: center;
 }
 
 .addService-col .mb-3{
     text-align: left;
+}
+
+.text-home{
+    width: 100%;
+}
+
+@media screen and (max-width: 767.98px){
+    .system-content{
+        width: 67.7vw !important;
+    }
+
+    .content-sidebar{
+        width: 30vw !important;
+        height: 98vh;
+    }
+
+    .content-sidebar div.d-flex{
+        width: 30vw;
+        height: 98vh;
+    }
+
+    span.text-span{
+        font-size: 16px !important;
+    }
+
+    .nav-link{
+        display: flex;
+        font-size: 9.5px;
+        align-items: center;
+        padding: 8px 8px;
+        width: 80.5px;
+    }
+
+    .nav-link svg{
+        height: 10px !important;
+        width: 10px !important;
+    }
+
+    .nav-link#addService{
+        justify-content: center;
+        font-size: 8.5px;
+    }
+
+    .container > div{
+        margin-left: 0rem !important;
+        margin-top: 1.9rem !important;
+    }
+
+    .header{
+        width: 64vw !important;
+    }
+
+    .header h3{
+        width: 50vw;
+        font-size: 12.7px;
+    }
+    
+    .header h6{
+        width: 50vw;
+        font-size: 12.7px;
+    }
+
+    .title-funcao{
+        font-size: 15px;
+    }
+
+    .content-principal{
+        margin-left: 0rem !important;
+        margin-top: 1.9rem !important;
+    }
+
+    .content-funcao-home{
+        font-size: 12px;
+    }
+
+    .content-addService{
+        height: 82.9vh;
+    }
+
+    .content-funcao{
+        height: 70.5vh;
+    }
+
+    .content-funcao .row{
+        height: 70.5vh;
+    }
+
+    .row .col.disabled{
+        height: 2vh;
+    }
+
+    .row .col-md-6{
+        height: 66.2vh;
+    }
+
+    .col-md-6 .h-100{
+        padding: 8px 8px !important;
+    }
+
+    .addService-col .mb-3{
+        margin-bottom: 2rem !important;
+    }
+
+    .mb-3 label{
+        margin-bottom: 1rem !important;
+    }
+
+    .mb-3 .form-control{
+        height: 28vh    ;
+    }
 }
