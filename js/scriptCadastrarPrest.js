@@ -32,7 +32,7 @@ function clickCadastrar(){
 }
 
 function cadastrarPrest(){
-    fetch("http://localhost:8080/prestador/cadastrar",
+    fetch("https://studied-bridge-460305-v6.rj.r.appspot.com/prestador/cadastrar",
         {
             headers: {
                 'Accept': 'application/json',
@@ -72,7 +72,7 @@ function sucessoCadastro(){
 }
 
 function redirecionarlogin(){
-    window.location.replace("http://127.0.0.1:5500/login/login.html");
+    window.location.replace("https://gabharmony.github.io/PI-Poste-Eletronico/login/login.html");
 }
 
 celular.addEventListener("input", onlyNumbers);

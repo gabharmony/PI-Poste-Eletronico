@@ -19,7 +19,7 @@ function clickLogin(){
 }
 
 function loginContrat(){
-    const url = "http://localhost:8080/contratante/login/"+ email.value + "/" + senha.value;
+    const url = "https://studied-bridge-460305-v6.rj.r.appspot.com/contratante/login/"+ email.value + "/" + senha.value;
     fetch(url)
     .then(response => response.json())  
     .then(data => {
@@ -44,7 +44,7 @@ function loginContrat(){
 }
 
 function redirecionarHome(){
-    window.location.replace("http://127.0.0.1:5500/app/homec.html");
+    window.location.replace("https://gabharmony.github.io/PI-Poste-Eletronico/app/homec.html");
 }
 
 formContratLogin.addEventListener("submit", clickLogin)

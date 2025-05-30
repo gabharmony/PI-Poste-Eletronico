@@ -21,7 +21,7 @@ function clickLogin(){
 
 function loginPrest(){
 
-    const url = "http://localhost:8080/prestador/login/"+ email.value + "/" + senha.value;
+    const url = "https://studied-bridge-460305-v6.rj.r.appspot.com/prestador/login/"+ email.value + "/" + senha.value;
     fetch(url)
     .then(response => response.json())  
     .then(data => {
@@ -46,7 +46,7 @@ function loginPrest(){
 }
 
 function redirecionarHome(){
-    window.location.replace("http://127.0.0.1:5500/app/home.html");
+    window.location.replace("https://gabharmony.github.io/PI-Poste-Eletronico/app/home.html");
 }
 
 formPrestLogin.addEventListener("submit", clickLogin)
